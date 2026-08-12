@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/mcp-profile.schema.json",
+  "mcpServers": {
+    "minaSafe": {
+      "command": "mina-safe-mcp",
+      "args": []
+    },
+    "unsafeWallet": {
+      "command": "npx",
+      "args": ["-y", "@o1-labs/mina-mcp-server@0.7.3", "--wallets", "wallets.json"]
+    }
+  }
+}

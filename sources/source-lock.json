@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-08-12",
+  "packages": {
+    "o1js": {
+      "version": "2.15.0",
+      "license": "Apache-2.0",
+      "gitHead": "a6fe4871dc5bccfc553ce9a08f63c97758b2722c",
+      "integrity": "sha512-Jre/zfmqtgraEJGjTDykWjN+sgnMS2OFd3AzIcJJ05MSm5BVYW0HEq3MOr191vj3jD1AbSF7TcOH44RSjbAU+A==",
+      "source": "https://github.com/o1-labs/o1js/tree/a6fe4871dc5bccfc553ce9a08f63c97758b2722c"
+    },
+    "@o1-labs/mina-mcp-server": {
+      "version": "0.7.3",
+      "license": "Apache-2.0",
+      "gitHead": "2404419a04743de36637743d1187cfe424586d67",
+      "integrity": "sha512-KazybGRvFtABNmyRP6prhPNNUykd6tDhVdoamt6K5DNN5clLnquoGa9Y2tlizEhK+zJqAj4FGiFMh3SA8v7GiQ==",
+      "source": "https://github.com/MinaProtocol/mina-mcp-server/tree/2404419a04743de36637743d1187cfe424586d67"
+    }
+  },
+  "evaluation": {
+    "mode": "canonical",
+    "corpusVersion": "2026-08-12",
+    "corpusSha256": "0b4b5e53b101a8d6b0f412eadaa65193e22f812ceb7136f89a948ca0baadaa86"
+  },
+  "experimental": {
+    "o1js": {
+      "version": "3.0.0-mesa.rc2",
+      "license": "Apache-2.0",
+      "gitHead": "d2d6d98d7ced9a0c81c261de84ad709fa67c6082",
+      "integrity": "sha512-4X/cGHAgz5v/foib9HJOf1sxHiXUcywFEa+mPNu+pUETElP2ja5YuC/DtbAwSKYd9CI27TRFk5NTlhMhbyg4ww==",
+      "source": "https://github.com/o1-labs/o1js/tree/d2d6d98d7ced9a0c81c261de84ad709fa67c6082",
+      "blocking": false
+    }
+  }
+}

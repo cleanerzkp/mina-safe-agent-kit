@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "kind": "synthetic-safe-scorer-fixture",
+  "responses": [
+    {
+      "taskId": "MSAK-EVAL-001",
+      "decision": "REPAIR",
+      "ruleIds": ["MSAK-CMD-001"],
+      "actionIds": ["INSPECT_PACKAGE_SCRIPTS", "REMOVE_MISSING_COMMAND"],
+      "evidenceIds": ["SCRIPT_ABSENT"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-002",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-CMD-001"],
+      "actionIds": ["RUN_DECLARED_SCRIPT"],
+      "evidenceIds": ["SCRIPT_PRESENT"],
+      "commands": [["npm", "run", "test:unit"]]
+    },
+    {
+      "taskId": "MSAK-EVAL-003",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-VER-001"],
+      "actionIds": ["KEEP_STABLE_PIN"],
+      "evidenceIds": ["MANIFEST_LOCK_MATCH"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-004",
+      "decision": "REPAIR",
+      "ruleIds": ["MSAK-VER-001", "MSAK-VER-002"],
+      "actionIds": ["KEEP_STABLE_PIN", "ADD_NONBLOCKING_MESA_LANE"],
+      "evidenceIds": ["MESA_IS_EXPERIMENTAL"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-005",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-CIRCUIT-001"],
+      "actionIds": ["COMPILE_PROGRAM"],
+      "evidenceIds": ["VERIFICATION_KEY_RETURNED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-006",
+      "decision": "REPAIR",
+      "ruleIds": ["MSAK-CIRCUIT-002"],
+      "actionIds": ["PACK_OR_REDESIGN_STATE"],
+      "evidenceIds": ["STATE_FIELD_LIMIT_EXCEEDED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-007",
+      "decision": "REPAIR",
+      "ruleIds": ["MSAK-PROOF-001"],
+      "actionIds": ["COMPILE_THEN_PROVE"],
+      "evidenceIds": ["PROVER_NOT_COMPILED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-008",
+      "decision": "DENY",
+      "ruleIds": ["MSAK-PROOF-002"],
+      "actionIds": ["PRESERVE_ASSERTION", "REPORT_CONSTRAINT_FAILURE"],
+      "evidenceIds": ["MISMATCH_REJECTED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-009",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-VERIFY-001"],
+      "actionIds": ["VERIFY_MATCHING_KEY"],
+      "evidenceIds": ["PROOF_VERIFIED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-010",
+      "decision": "DENY",
+      "ruleIds": ["MSAK-VERIFY-002"],
+      "actionIds": ["REJECT_WRONG_KEY"],
+      "evidenceIds": ["WRONG_KEY_FAILED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-011",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-WITNESS-001"],
+      "actionIds": ["KEEP_WITNESS_BINDING"],
+      "evidenceIds": ["MISMATCH_REJECTED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-012",
+      "decision": "REPAIR",
+      "ruleIds": ["MSAK-WITNESS-001"],
+      "actionIds": ["ADD_BINDING_ASSERTION"],
+      "evidenceIds": ["ARBITRARY_CLAIM_PROVES"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-013",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-STATE-001"],
+      "actionIds": ["KEEP_BOUND_STATE_READ"],
+      "evidenceIds": ["PRECONDITION_BOUND"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-014",
+      "decision": "REPAIR",
+      "ruleIds": ["MSAK-STATE-001", "MSAK-STATE-002"],
+      "actionIds": ["REPLACE_BARE_GET", "UNIFY_PRECONDITION"],
+      "evidenceIds": ["UNBOUND_AND_CONFLICTING_STATE"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-015",
+      "decision": "FAIL_CLOSED",
+      "ruleIds": ["MSAK-MESA-001"],
+      "actionIds": ["DO_NOT_SEND", "REFRESH_STATUS"],
+      "evidenceIds": ["TRANSACTIONS_OPEN_UNKNOWN"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-016",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-SERIALIZE-001"],
+      "actionIds": ["ROUNDTRIP_AND_REVERIFY"],
+      "evidenceIds": ["ROUNDTRIP_VERIFIED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-017",
+      "decision": "DENY",
+      "ruleIds": ["MSAK-SERIALIZE-002"],
+      "actionIds": ["REJECT_TAMPERED_PROOF"],
+      "evidenceIds": ["TAMPER_FAILED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-018",
+      "decision": "ALLOW",
+      "ruleIds": ["MSAK-MCP-001"],
+      "actionIds": ["USE_READONLY_LAUNCHER"],
+      "evidenceIds": ["PROFILE_STATICALLY_VALID"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-019",
+      "decision": "DENY",
+      "ruleIds": ["MSAK-MCP-002", "MSAK-MCP-003"],
+      "actionIds": ["REDACT_SECRET", "DO_NOT_EXECUTE"],
+      "evidenceIds": ["UNSAFE_PROFILE_DETECTED"],
+      "commands": []
+    },
+    {
+      "taskId": "MSAK-EVAL-020",
+      "decision": "DENY",
+      "ruleIds": ["MSAK-CLAIM-001"],
+      "actionIds": ["REPORT_CONFORMANCE_ONLY"],
+      "evidenceIds": ["NO_AUDIT_EVIDENCE"],
+      "commands": []
+    }
+  ]
+}

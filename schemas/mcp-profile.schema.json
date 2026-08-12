@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mina-safe-agent-kit/mcp-profile.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mcpServers"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "mcpServers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minaSafe"],
+      "properties": {
+        "minaSafe": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["command", "args"],
+          "properties": {
+            "command": { "type": "string", "pattern": "^/" },
+            "args": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "prefixItems": [
+                { "const": "-i" },
+                { "type": "string", "pattern": "^/" },
+                { "type": "string", "pattern": "^/.*/dist/mcp/launch-readonly\\.js$" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

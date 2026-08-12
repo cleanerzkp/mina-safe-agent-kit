@@ -1,0 +1,7 @@
+{
+  "name": "target-with-non-string-script",
+  "private": true,
+  "scripts": {
+    "typecheck": true
+  }
+}

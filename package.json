@@ -1,0 +1,69 @@
+{
+  "name": "mina-safe-agent-kit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic safety checks and conformance fixtures for AI-assisted Mina and o1js development.",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "packageManager": "npm@11.17.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cleanerzkp/mina-safe-agent-kit.git"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "docs/",
+    "evaluations/",
+    "schemas/",
+    "skills/",
+    "sources/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md"
+  ],
+  "bin": {
+    "mina-safe-agent-kit": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "npm run check:static && npm run test:conformance",
+    "check:static": "npm run format:check && npm run typecheck && npm run test:static && npm run build && npm run evaluate && npm run profile:check",
+    "format": "biome check --write .",
+    "format:check": "biome check .",
+    "prepack": "npm run build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && vitest run",
+    "test:conformance": "npm run build && vitest run tests/conformance-cli.test.ts",
+    "test:mcp-policy": "npm run build && vitest run tests/profile-cli.test.ts",
+    "test:static": "npm run build && vitest run --exclude tests/conformance-cli.test.ts",
+    "test:watch": "vitest",
+    "conformance": "node --import tsx src/cli.ts conformance --json",
+    "evaluate": "node --import tsx src/cli.ts evaluate --corpus evaluations/tasks.json --responses evaluations/baseline-responses.json --mode canonical --json",
+    "profile:check": "npm run build && node dist/cli.js profile generate --json"
+  },
+  "dependencies": {
+    "@o1-labs/mina-mcp-server": "0.7.3",
+    "o1js": "2.15.0",
+    "yaml": "2.9.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.8",
+    "@types/node": "24.13.3",
+    "tsx": "4.23.12",
+    "typescript": "5.4.5",
+    "vitest": "4.1.10"
+  },
+  "license": "MIT",
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "fsevents": false
+  }
+}

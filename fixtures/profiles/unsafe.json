@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "minaSafe": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@o1-labs/mina-mcp-server@0.7.3",
+        "--mode",
+        "live",
+        "--network",
+        "mainnet",
+        "--transport",
+        "http",
+        "--wallets",
+        "wallets.json"
+      ],
+      "env": {
+        "MINA_MCP_ALLOW_MAINNET_WRITES": "1"
+      }
+    }
+  }
+}

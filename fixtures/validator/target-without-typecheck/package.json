@@ -1,0 +1,7 @@
+{
+  "name": "target-without-typecheck",
+  "private": true,
+  "scripts": {
+    "test": "vitest run"
+  }
+}

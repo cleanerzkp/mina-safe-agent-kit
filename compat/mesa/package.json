@@ -1,0 +1,15 @@
+{
+  "name": "mina-safe-agent-kit-mesa-compat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.5"
+  },
+  "scripts": {
+    "test": "node smoke.mjs"
+  },
+  "dependencies": {
+    "o1js": "3.0.0-mesa.rc2"
+  }
+}
