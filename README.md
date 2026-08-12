@@ -32,8 +32,10 @@ npm ci
 npm run check
 ```
 
-Until the first tagged public release, clone this repository and use it locally. No npm package has
-been published. Run `npm run build`, then generate an installation-specific MCP profile:
+No npm package has been published. Install the versioned tarball attached to the matching
+[GitHub release](https://github.com/cleanerzkp/mina-safe-agent-kit/releases), or clone this repository
+and use it locally. For a cloned checkout, run `npm run build`, then generate an
+installation-specific MCP profile:
 
 ```sh
 node dist/cli.js profile generate --json
@@ -72,9 +74,10 @@ macOS and Linux; Windows is not claimed.
 ## Evaluation boundary
 
 The checked-in safe and unsafe response files are synthetic scorer controls. A 100/100 result proves
-that the scorer recognizes its gold fixture; it does not prove that an AI model improved. A credible
-grant application still needs genuine with-skill and without-skill runs under identical model settings,
-five Mina developer reviews, and one maintainer or ecosystem pilot.
+that the scorer recognizes its gold fixture; it does not prove that an AI model improved. The proposed
+grant milestones fund genuine with-skill and without-skill runs under identical model settings, five
+Mina developer reviews, and ecosystem pilots. Until those milestones are complete, do not claim model
+improvement, adoption, or maintainer endorsement.
 
 ## Documentation
 

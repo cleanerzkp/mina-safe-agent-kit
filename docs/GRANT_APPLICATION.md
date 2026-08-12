@@ -1,6 +1,7 @@
 # Provisional Mina Builder Grant application
 
-Status: **draft; do not submit until the external evidence and contract gates are complete.**
+Status: **application-ready after the public v0.1.0 release and green release-commit CI. No form has
+been submitted.**
 
 ## Project
 
@@ -42,7 +43,7 @@ Partnership/Investment category. The public program has no USD 50k lane.
 | M1 — demand and overlap evidence | five recorded Mina developer interviews, public overlap matrix, five written pilot commitments, and a fixed prompt-only baseline protocol | USD 4,000 |
 | M2 — expanded rule and skill pack | four net-new task skills, ten new Rule IDs with positive/negative fixtures, schemas, migration notes, and editor/CI examples | USD 7,000 |
 | M3 — expanded conformance matrix | at least 25 net-new o1js fixtures for state preconditions, recursive proofs, tamper cases, and stable-versus-Mesa drift, each with executable oracles | USD 8,000 |
-| M4 — distributable safe integration | tagged installable release, package artifact test, tool-surface snapshot diff, macOS/Linux launcher tests, and independent security review closure | USD 5,000 |
+| M4 — expanded distributable v1.0 integration | tagged installable v1.0 release, package artifact test, tool-surface snapshot diff, macOS/Linux launcher tests, and independent security review closure | USD 5,000 |
 | M5 — measured adoption | 100-task model A/B report, ten external pilots, five public repository integrations, issue/adoption metrics, and a 12-month maintenance plan | USD 6,000 |
 | **Total** |  | **USD 30,000** |
 
@@ -80,11 +81,24 @@ before submission.
 Before submission:
 
 1. publish the repository with a clean ownership history;
-2. obtain feedback from at least five Mina developers;
-3. obtain one Mina maintainer or ecosystem pilot signal;
-4. run genuine prompt-only and skill-assisted evaluations;
-5. provide applicant identity, prior-work links, and the IP/conflict boundary privately;
-6. publish a tagged, installable release with green CI and preserved reports;
-7. confirm the applicant's jurisdiction and contracting form privately;
-8. confirm contracting entity, payment asset, conversion, lockup, KYC, tax, IP, milestone acceptance,
-   cure, termination, and payment timing in writing.
+2. publish the tagged, installable v0.1.0 prework release with green CI and preserved reports;
+3. provide applicant identity, contact email, prior-work links, and the IP/conflict boundary only
+   through the official private application;
+4. disclose that developer feedback, pilots, genuine model A/B evidence, adoption, endorsement,
+   deployment, production usage, and revenue are not yet evidenced;
+5. select **Builder Grant**, state the USD 30,000 request, and describe interviews, pilots, and genuine
+   prompt-only versus skill-assisted evaluation as future funded milestones.
+
+The public program accepts developers and teams that are building with Mina or looking to start. Its
+Builder lane requires a credible adoption plan, not fabricated existing adoption. The five developer
+reviews, pilot signals, and genuine model evaluation are therefore milestone deliverables rather than
+pre-application claims.
+
+## Pre-contract acceptance gates
+
+Do not sign an agreement or accept funds until the applicant receives these terms in writing:
+
+1. eligible jurisdiction and contracting form, contracting entity, and governing law;
+2. payment asset, conversion date, token lockup, KYC, sanctions screening, tax, and withholding terms;
+3. background and foreground IP ownership plus any open-source obligations;
+4. milestone acceptance, cure, termination, clawback, invoicing, and payment timing.
